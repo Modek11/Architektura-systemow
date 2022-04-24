@@ -29,10 +29,10 @@ namespace Intel8086Emulator
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxAX = new System.Windows.Forms.TextBox();
+            this.textBoxBX = new System.Windows.Forms.TextBox();
+            this.textBoxCX = new System.Windows.Forms.TextBox();
+            this.textBoxDX = new System.Windows.Forms.TextBox();
             this.FromAX = new System.Windows.Forms.RadioButton();
             this.FromBX = new System.Windows.Forms.RadioButton();
             this.ToBX = new System.Windows.Forms.RadioButton();
@@ -56,33 +56,33 @@ namespace Intel8086Emulator
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxAX
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxAX.Location = new System.Drawing.Point(88, 58);
+            this.textBoxAX.Name = "textBoxAX";
+            this.textBoxAX.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAX.TabIndex = 0;
             // 
-            // textBox2
+            // textBoxBX
             // 
-            this.textBox2.Location = new System.Drawing.Point(88, 102);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBoxBX.Location = new System.Drawing.Point(88, 102);
+            this.textBoxBX.Name = "textBoxBX";
+            this.textBoxBX.Size = new System.Drawing.Size(100, 20);
+            this.textBoxBX.TabIndex = 1;
             // 
-            // textBox3
+            // textBoxCX
             // 
-            this.textBox3.Location = new System.Drawing.Point(88, 190);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.textBoxCX.Location = new System.Drawing.Point(88, 146);
+            this.textBoxCX.Name = "textBoxCX";
+            this.textBoxCX.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCX.TabIndex = 3;
             // 
-            // textBox4
+            // textBoxDX
             // 
-            this.textBox4.Location = new System.Drawing.Point(88, 146);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 2;
+            this.textBoxDX.Location = new System.Drawing.Point(89, 190);
+            this.textBoxDX.Name = "textBoxDX";
+            this.textBoxDX.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDX.TabIndex = 2;
             // 
             // FromAX
             // 
@@ -241,6 +241,7 @@ namespace Intel8086Emulator
             this.MOV.TabIndex = 22;
             this.MOV.Text = "MOV";
             this.MOV.UseVisualStyleBackColor = true;
+            this.MOV.Click += new System.EventHandler(this.MOV_Click);
             // 
             // XCHG
             // 
@@ -251,6 +252,7 @@ namespace Intel8086Emulator
             this.XCHG.TabIndex = 23;
             this.XCHG.Text = "XCHG";
             this.XCHG.UseVisualStyleBackColor = true;
+            this.XCHG.Click += new System.EventHandler(this.XCHG_Click);
             // 
             // RandomInputs
             // 
@@ -261,6 +263,7 @@ namespace Intel8086Emulator
             this.RandomInputs.TabIndex = 24;
             this.RandomInputs.Text = "Random";
             this.RandomInputs.UseVisualStyleBackColor = true;
+            this.RandomInputs.Click += new System.EventHandler(this.RandomInputs_Click);
             // 
             // panel1
             // 
@@ -301,11 +304,14 @@ namespace Intel8086Emulator
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxCX);
+            this.Controls.Add(this.textBoxDX);
+            this.Controls.Add(this.textBoxBX);
+            this.Controls.Add(this.textBoxAX);
+            this.MaximumSize = new System.Drawing.Size(476, 489);
+            this.MinimumSize = new System.Drawing.Size(476, 489);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Intel 8086 emulator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -319,10 +325,10 @@ namespace Intel8086Emulator
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxAX;
+        private System.Windows.Forms.TextBox textBoxBX;
+        private System.Windows.Forms.TextBox textBoxCX;
+        private System.Windows.Forms.TextBox textBoxDX;
         private System.Windows.Forms.RadioButton FromAX;
         private System.Windows.Forms.RadioButton FromBX;
         private System.Windows.Forms.RadioButton ToBX;
