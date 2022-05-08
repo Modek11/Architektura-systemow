@@ -62,6 +62,7 @@ namespace Intel8086Emulator
             this.textBoxAX.Name = "textBoxAX";
             this.textBoxAX.Size = new System.Drawing.Size(100, 20);
             this.textBoxAX.TabIndex = 0;
+            this.textBoxAX.TextChanged += new System.EventHandler(this.textBoxAX_TextChanged);
             // 
             // textBoxBX
             // 
@@ -69,6 +70,7 @@ namespace Intel8086Emulator
             this.textBoxBX.Name = "textBoxBX";
             this.textBoxBX.Size = new System.Drawing.Size(100, 20);
             this.textBoxBX.TabIndex = 1;
+            this.textBoxBX.TextChanged += new System.EventHandler(this.textBoxBX_TextChanged);
             // 
             // textBoxCX
             // 
@@ -76,6 +78,7 @@ namespace Intel8086Emulator
             this.textBoxCX.Name = "textBoxCX";
             this.textBoxCX.Size = new System.Drawing.Size(100, 20);
             this.textBoxCX.TabIndex = 3;
+            this.textBoxCX.TextChanged += new System.EventHandler(this.textBoxCX_TextChanged);
             // 
             // textBoxDX
             // 
@@ -83,6 +86,7 @@ namespace Intel8086Emulator
             this.textBoxDX.Name = "textBoxDX";
             this.textBoxDX.Size = new System.Drawing.Size(100, 20);
             this.textBoxDX.TabIndex = 2;
+            this.textBoxDX.TextChanged += new System.EventHandler(this.textBoxDX_TextChanged);
             // 
             // FromAX
             // 
