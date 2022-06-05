@@ -52,6 +52,7 @@ namespace Intel8086Emulator
             this.RandomInputs = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ResetInputs = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -239,7 +240,7 @@ namespace Intel8086Emulator
             // MOV
             // 
             this.MOV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.MOV.Location = new System.Drawing.Point(83, 308);
+            this.MOV.Location = new System.Drawing.Point(88, 349);
             this.MOV.Name = "MOV";
             this.MOV.Size = new System.Drawing.Size(135, 54);
             this.MOV.TabIndex = 22;
@@ -250,7 +251,7 @@ namespace Intel8086Emulator
             // XCHG
             // 
             this.XCHG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.XCHG.Location = new System.Drawing.Point(257, 308);
+            this.XCHG.Location = new System.Drawing.Point(257, 349);
             this.XCHG.Name = "XCHG";
             this.XCHG.Size = new System.Drawing.Size(135, 54);
             this.XCHG.TabIndex = 23;
@@ -265,7 +266,7 @@ namespace Intel8086Emulator
             this.RandomInputs.Name = "RandomInputs";
             this.RandomInputs.Size = new System.Drawing.Size(140, 39);
             this.RandomInputs.TabIndex = 24;
-            this.RandomInputs.Text = "Random";
+            this.RandomInputs.Text = "Random Values";
             this.RandomInputs.UseVisualStyleBackColor = true;
             this.RandomInputs.Click += new System.EventHandler(this.RandomInputs_Click);
             // 
@@ -275,7 +276,7 @@ namespace Intel8086Emulator
             this.panel1.Controls.Add(this.ToAX);
             this.panel1.Controls.Add(this.ToDX);
             this.panel1.Controls.Add(this.ToCX);
-            this.panel1.Location = new System.Drawing.Point(358, 83);
+            this.panel1.Location = new System.Drawing.Point(272, 83);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(52, 134);
             this.panel1.TabIndex = 26;
@@ -286,10 +287,21 @@ namespace Intel8086Emulator
             this.panel2.Controls.Add(this.FromBX);
             this.panel2.Controls.Add(this.FromCX);
             this.panel2.Controls.Add(this.FromDX);
-            this.panel2.Location = new System.Drawing.Point(275, 83);
+            this.panel2.Location = new System.Drawing.Point(361, 83);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(49, 134);
             this.panel2.TabIndex = 27;
+            // 
+            // ResetInputs
+            // 
+            this.ResetInputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ResetInputs.Location = new System.Drawing.Point(48, 273);
+            this.ResetInputs.Name = "ResetInputs";
+            this.ResetInputs.Size = new System.Drawing.Size(140, 39);
+            this.ResetInputs.TabIndex = 28;
+            this.ResetInputs.Text = "Reset Values";
+            this.ResetInputs.UseVisualStyleBackColor = true;
+            this.ResetInputs.Click += new System.EventHandler(this.ResetInputs_Click);
             // 
             // Form1
             // 
@@ -297,6 +309,7 @@ namespace Intel8086Emulator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(460, 450);
+            this.Controls.Add(this.ResetInputs);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.RandomInputs);
@@ -352,6 +365,7 @@ namespace Intel8086Emulator
         private System.Windows.Forms.Button RandomInputs;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button ResetInputs;
     }
 }
 

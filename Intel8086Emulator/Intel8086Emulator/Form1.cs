@@ -247,6 +247,7 @@ namespace Intel8086Emulator
         #region Validating TextBoxes
         private void textBoxAX_TextChanged(object sender, EventArgs e)
         {
+            textBoxAX.CharacterCasing = CharacterCasing.Upper;
             char[] textToChar = textBoxAX.Text.ToCharArray();
             foreach (var t in textToChar)
             {
@@ -266,6 +267,7 @@ namespace Intel8086Emulator
 
         private void textBoxBX_TextChanged(object sender, EventArgs e)
         {
+            textBoxBX.CharacterCasing = CharacterCasing.Upper;
             char[] textToChar = textBoxBX.Text.ToCharArray();
             foreach (var t in textToChar)
             {
@@ -285,6 +287,7 @@ namespace Intel8086Emulator
 
         private void textBoxCX_TextChanged(object sender, EventArgs e)
         {
+            textBoxCX.CharacterCasing = CharacterCasing.Upper;
             char[] textToChar = textBoxCX.Text.ToCharArray();
             foreach (var t in textToChar)
             {
@@ -304,6 +307,7 @@ namespace Intel8086Emulator
 
         private void textBoxDX_TextChanged(object sender, EventArgs e)
         {
+            textBoxDX.CharacterCasing = CharacterCasing.Upper;
             char[] textToChar = textBoxDX.Text.ToCharArray();
             foreach (var t in textToChar)
             {
@@ -322,5 +326,13 @@ namespace Intel8086Emulator
         }
 
         #endregion
+
+        private void ResetInputs_Click(object sender, EventArgs e)
+        {
+            textBoxAX.Text = "0000";
+            textBoxBX.Text = "0000";
+            textBoxCX.Text = "0000";
+            textBoxDX.Text = "0000";
+        }
     }
 }
